@@ -1,0 +1,167 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="food_style.css">
+</head>
+<body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Foodies Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#customize">Customize Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#about">About Us</a></li>
+                            <li><a class="dropdown-item" href="#offers">Offers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-section text-white text-center py-5" style="background-color: rgb(202, 255, 255); background-image: url(food.jpg); background-image: -moz-repeating-linear-gradient();">
+            <div class="container">
+                <h1 >Welcome to Foodies Hub</h1><br>
+                <h4 class="text-dark text-bold" ><mark style="background-color: black; color: white; border-radius: 10px; border: 2px solid rgb(255, 125, 95); margin-bottom: 10px;">Delicious food deliver to your door!</mark></h4><br>
+                <a href="/News24Hours.html" class="btn btn-primary btn-lg" style="background-color: rgb(249, 163, 120); color: black; border: 3px solid black; font-weight: bold; border-radius: 30px;">Order Now</a>
+        </div>
+        </div>
+    
+    </header>
+ 
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" >Our Menu</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Non-Veg</h4>
+                    <class class="list-group mb-4">
+                        <li class="list-group-item">Chicken Curry - $9.99</li>
+                        <li class="list-group-item">Mutton Curry - $9.99</li>
+                        <li class="list-group-item">Prawns Curry - $9.99</li>
+                        <li class="list-group-item">Crab Curry - $9.99</li>
+                        <li class="list-group-item">Egg Curry - $9.99</li>
+                    </class>
+                </div>
+                <div class="col-md-4">
+                        <h4>Veg</h4>
+                        <class class="list-group mb-4">
+                            <li class="list-group-item">Butter Curry - $9.99</li>
+                            <li class="list-group-item">Paneer Curry - $9.99</li>
+                            <li class="list-group-item">Spinach - $9.99</li>
+                            <li class="list-group-item">Chapati Bhaji - $9.99</li>
+                            <li class="list-group-item">Dal rice - $9.99</li>
+                        </class>
+                </div>
+                
+                    <div class="col-md-4">
+                        <h4>Chinese</h4>
+                        <class class="list-group mb-4">
+                            <li class="list-group-item">Fried Rice - $9.99</li>
+                            <li class="list-group-item">Triple Rice- $9.99</li>
+                            <li class="list-group-item">Triple Noodles - $9.99</li>
+                            <li class="list-group-item">Chicken Manchurian - $9.99</li>
+                            <li class="list-group-item">Hakka Noodles - $9.99</li>
+                        </class>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="customize" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Customize your food</h2>
+            <form action="">
+                <div class="mb-3">
+                    <label for="fooditem" class="form-label">Select Food Item</label>
+                    <select name="food item select" id="select" class="form-select" required>
+                        <option value="">Mutton</option>
+                        <option value="">Paneer Butter Masala</option>
+                        <option value="">Chicken </option>
+                        <option value="">Chicken Raigadi</option>
+                        <option value="">Chicken Masala</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="SpiceLevel" class="form-label">Spice Level</label>
+                    <select name="Spice level select" id="spicelevelselect" class="form-select" required>
+                        <option value="">Sweet</option>
+                        <option value="">No Spicy</option>
+                        <option value="">Mild Spicy</option>
+                        <option value="">Medium Spicy</option>
+                        <option value="">High Spicy</option>
+                        <option value="">Ultra High Spicy</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="QuantityLevel" class="form-label">Quantity Level</label>
+                    <select name="Quantity level select" id="quantitylevelselect" class="form-select" required>
+                        <option value="">1/4</option>
+                        <option value="">Half</option>
+                        <option value="">Full</option>
+                        <option value="">double</option>
+                    </select>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" value="Extra cheese" id="addoncheese">
+                    <label for="extra cheese">Cheese Add on</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" value="Extra sauce" id="addonsauce">
+                    <label for="extra cheese">Extra sauce</label>
+                </div>
+                <br>
+
+                <div>
+                    <caption>Select Price Range</caption><br>
+                    <input type="radio" value="low" id="price" name="price">
+                    <label for="price range select">1-100$</label><br>
+                    <input type="radio" value="medium" id="price" name="price">
+                    <label for="price range select">100-200$</label><br>
+                    <input type="radio" value="high" id="price" name="price">
+                    <label for="price range select">200-300$</label>
+                    
+                </div>
+                <center><button class="btn btn-default btn-primary bg-dark" type="submit">Confirm Order</button></center>
+                
+            </form>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-5">
+        <p>&copy; 2024 Foodies Hub. All Rights Reserved.</p>
+    </footer>
+ 
+   
+</body>
+</html>
+ 
+ 
+</body>
+</html>
