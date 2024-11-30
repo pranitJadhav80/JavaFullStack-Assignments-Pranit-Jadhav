@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Login.css" />
+    <style>
+      body {
+        background-color: #f8f9fa; /* Light background for better contrast */
+      }
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+      .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh; /* Full viewport height */
+      }
+      .child {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px; /* Max width for the form */
+      }
+      .form-control {
+        margin-bottom: 15px; /* Space between inputs */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="parent">
+      <div class="child">
+        <h1 class="text-center"><b>Login</b></h1>
+        <hr />
+        <form action="" class="form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Username"
+              style="
+                font-size: 16px;
+                font-family: 'Times New Roman', Times, serif;
+              "
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Password"
+              style="
+                font-size: 16px;
+                font-family: 'Times New Roman', Times, serif;
+              "
+            />
+          </div>
+          <div class="text-center">
+            <a href="#" style="text-decoration: none; color: gray"
+              >Forget Password</a
+            >
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="btn btn-danger btn-block"
+              style="margin-top: 30px"
+            >
+              <b style="font-size: 18px">Login</b>
+            </button>
+          </div>
+          <div class="text-center" style="margin-top: 15px">
+            <label for="signup">Not a member?</label>
+            <a href="Registration.html" style="text-decoration: none">Signup</a>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
