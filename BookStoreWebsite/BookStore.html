@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bookstore</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="bookstore.css" />
+    <style>
+      body {
+        background: linear-gradient(to right, #ff8860, #ffd3b4);
+      }
+      .header {
+        background-color: #ffffff;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        text-align: center;
+        color: #333;
+      }
+      .category-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-family: "Times New Roman", serif;
+        color: #333;
+      }
+      .book-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .book-card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .btn-read {
+        background-color: #ff2200;
+        color: #fff;
+        border-radius: 20px;
+      }
+      .btn-read:hover {
+        background-color: #e63900;
+        color: #fff;
+      }
+      .footer {
+        background-color: #f8f9fa;
+        padding: 10px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Bookstore</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout-btn">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Welcome to the Online Bookstore</h1>
+    </header>
+
+    <!-- Welcome Message -->
+    <div class="container text-center mt-4">
+      <h2 id="welcome-message">Welcome, User!</h2>
+    </div>
+
+    <!-- Books Display -->
+    <div class="container">
+      <div id="books-container" class="row">
+        <!-- Dynamic book cards will be inserted here -->
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer mt-5">
+      <p>&copy; 2024 Online Bookstore. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Simulate logged-in user data
+      const loggedInUser = { name: "John Doe" };
+
+      // Display welcome message
+      const welcomeMessage = document.getElementById("welcome-message");
+      welcomeMessage.innerText = `Welcome, ${loggedInUser.name}!`;
+
+      // Sample data for books
+      const booksData = {
+        Fiction: [
+          {
+            title: "The Great Gatsby",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "Pride and Prejudice",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "Pride and Prejudice",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+        ],
+        NonFiction: [
+          {
+            title: "A Brief History of Time",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+        ],
+        Novels: [
+          {
+            title: "A Brief History of Time",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+        ],
+        Technology: [
+          {
+            title: "Clean Code",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "Artificial Intelligence",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "Artificial Intelligence",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+        ],
+        Science: [
+          {
+            title: "A Brief History of Time",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+        ],
+        Magazines: [
+          {
+            title: "A Brief History of Time",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+          {
+            title: "The Selfish Gene",
+            image: "https://via.placeholder.com/150",
+            link: "#",
+          },
+        ],
+      };
+
+      // Simulating user-selected categories (from registration)
+      const userSelectedCategories = [
+        "Fiction",
+        "NonFiction",
+        "Novels",
+        "Technology",
+        "Science",
+        "Magazines",
+      ];
+
+      // Function to render books
+      function renderBooks() {
+        const container = document.getElementById("books-container");
+        userSelectedCategories.forEach(category => {
+          if (booksData[category]) {
+            // Add category title
+            const categoryTitle = document.createElement("h3");
+            categoryTitle.className = "category-title col-12";
+            categoryTitle.innerText = category;
+            container.appendChild(categoryTitle);
+
+            // Add books
+            booksData[category].forEach(book => {
+              const bookCard = document.createElement("div");
+              bookCard.className = "col-md-4 mb-4";
+
+              bookCard.innerHTML = `
+                            <div class="card book-card">
+                                <img src="${book.image}" class="card-img-top" alt="${book.title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${book.title}</h5>
+                                    <a href="${book.link}" class="btn btn-read btn-block">Read Now</a>
+                                </div>
+                            </div>
+                        `;
+              container.appendChild(bookCard);
+            });
+          }
+        });
+      }
+
+      // Call renderBooks on page load
+      document.addEventListener("DOMContentLoaded", renderBooks);
+
+      // Logout functionality
+      const logoutBtn = document.getElementById("logout-btn");
+
+      logoutBtn.addEventListener("click", function () {
+        alert("You have successfully logged out!");
+        window.location.href = "Login.html"; // Redirect to login page
+      });
+    </script>
+  </body>
+</html>

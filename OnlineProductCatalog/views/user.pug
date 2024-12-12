@@ -1,0 +1,35 @@
+// to view list of available products
+// see details of each product such as name, description, price and availability
+
+doctype html
+html
+    head
+        title Online Product Catalog
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+        style.
+            table {
+                table-layout: auto;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+    body
+        .container 
+            h1.text-center.mt-4 Welcome to Online Product Catalog
+            
+            if products && products.length > 0
+                table.table.table-striped.mt-4
+                    thead
+                        tr
+                            th Name
+                            th Description
+                            th Price
+                            th Availability
+                    tbody
+                        each product in products
+                            tr
+                                td= product.name
+                                td= product.description
+                                td ₹ #{product.price}
+                                td= product.availability ? "Yes" : "No"
+            else
+                p.text-center.text-muted.mt-4 No products are available at the moment.
